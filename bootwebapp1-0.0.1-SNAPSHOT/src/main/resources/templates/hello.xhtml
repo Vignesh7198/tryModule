@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+
+
+</head>
+
+<body>
+    <div id="test"></div>
+
+
+    <script>
+
+        let result = {
+  "screenName": "registration",
+  "screenUiDetails": [
+    {
+      "fieldsToDisplay": "first_name",
+      "fieldsOrderToDisplay": "01",
+      "fieldsGroup": "name",
+      "uiType": "text",
+      "validator": "true",
+      "fieldGroup": "name"
+    },
+    {
+      "fieldsToDisplay": "middle_name",
+      "fieldsOrderToDisplay": "02",
+      "fieldsGroup": "name",
+      "uiType": "text",
+      "validator": "true",
+      "fieldGroup": "name"
+    },
+    {
+      "fieldsToDisplay": "last_name",
+      "fieldsOrderToDisplay": "03",
+      "fieldsGroup": "name",
+      "uiType": "text",
+      "validator": "true",
+      "fieldGroup": "name"
+    },
+    {
+      "fieldsToDisplay": "gender",
+      "fieldsOrderToDisplay": "04",
+      "fieldsGroup": "gender",
+      "uiType": "radio",
+      "validator": "true",
+      "fieldGroup": "gender"
+    },
+    {
+      "fieldsToDisplay": "email_id",
+      "fieldsOrderToDisplay": "05",
+      "fieldsGroup": "email_contact",
+      "uiType": "text",
+      "validator": "true",
+      "fieldGroup": "contact"
+    },
+    {
+      "fieldsToDisplay": "phone_number",
+      "fieldsOrderToDisplay": "06",
+      "fieldsGroup": "ph_contact",
+      "uiType": "text",
+      "validator": "true",
+      "fieldGroup": "contact"
+    },
+    {
+      "fieldsToDisplay": "nationality",
+      "fieldsOrderToDisplay": "07",
+      "fieldsGroup": "nationality",
+      "uiType": "drop_down",
+      "validator": "true",
+      "fieldGroup": "born"
+    }
+  ]
+}
+
+let data = result.screenUiDetails;
+ 
+//console.log(data.length)
+  let div = document.getElementById("test");
+
+  let c = '';
+
+  for(let i=0;i<data.length;i++){
+c+=`${data[i].fieldsToDisplay}:<input type=${data[i].uiType} name=${data[i].fieldGroup}><br>`
+  }
+
+
+div.innerHTML = c;
+
+
+
+    </script>
+
+</body>
+
+</html>
